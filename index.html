@@ -1,69 +1,190 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"     content="width= , initial-scale=1.0">
-        <title>Blog</title>
-        <style>
-            header{
-               background-color: rgb(241, 149, 28);
-                color: rgb(148, 104, 47);
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-            }
-            main{
-                background-color: rgb(75, 176, 176);
-                color: rgb(84, 154, 131);
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                display: flex;
-            }
-            img{
-                width: 800px;
-                height: 80px;
-            }
-          .artigo-autor {
-                font-weight: bold;
-            }
-        </style>
-        <link rel="stylesheet" href="style.css">
-    </head>
-     <body>
-            <header>
-                <h1>Meu blog tech</h1>
-                <p>vou compartilhar conhecimento sobre flor liríos</p>
-            </header>
-            <main>
-                <img src="imagem liriós.jpeg" alt="Lírio azul com gotas de 
-                orvalho, brilhantes nas pétalas ao amanhecer">
-                <div>
-                    <h2>Meu primeiro post</h2>
-                    <p class="artigo-autor"> Por:Maria Eduarda </p>
-                    <p>Boas-vinda ao meu novo blog aqui vou compartilhar curiocidade sobre 
-                    flores de liriós<p>
-                    <battan>🌸 <span>0</span>​</battan>
-                    <battan>💖 <span>0</span>​</battan>
-                </div>
-            </main>                                                                                                                                                                                                                                                                                                                                 
- </body>
- <script>
-    const botoes = document.querySelectorAll("button");
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Maria - Meu Blog Tech</title>
+  
+  <style>
+    /* Estilos Globais e Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    botoes.forEach(function (botao){
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado(){
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            texto.textContent++;
-        }
+    body {
+      background-color: #fdf6f9;
+      color: #333333;
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
 
-    })
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, #8e24aa, #ab47bc);
+      color: #ffffff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
 
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
- </script>
+    /* Container Principal */
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Card do Post */
+    .post-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+    }
+
+    .post-card h2 {
+      color: #6a1b9a;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #f3e5f5;
+      padding-bottom: 0.5rem;
+    }
+
+    .post-meta {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1.5rem;
+    }
+
+    .post-card h3 {
+      color: #8e24aa;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .post-card p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* Listas */
+    .post-card ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .post-card li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Alerta / Caixa de Destaque */
+    .alert-box {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .alert-box h4 {
+      color: #e65100;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Reações e Interações */
+    .post-reactions {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .reaction-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meu Blog Tech</h1>
+    <p>Vou compartilhar conhecimento sobre tecnologia e programação</p>
+  </header>
+
+  <main>
+    <article class="post-card">
+      <h2>O Fascínio dos Lírios: História, Simbolismo e Cuidados</h2>
+      <p class="post-meta">Por <strong>Maria Eduarda</strong> • Publicado recentemente</p>
+
+      <p>
+        O lírio (<em>Lilium</em>) é uma das flores mais fascinantes e antigas da história da humanidade. Nativo das regiões temperadas do Hemisfério Norte, como Ásia e Europa, ele pertence à família Liliaceae e se desenvolve a partir de bulbos subterrâneos. Ao longo dos séculos, essa planta conquistou o mundo não apenas pela sua beleza exuberante e pétalas marcantes em formato de trombeta, mas também pelo seu perfume adocicado e marcante, muito utilizado na indústria de fragrâncias.
+      </p>
+
+      <h3>Simbolismo e Significados das Cores</h3>
+      <p>
+        Historicamente, a variedade branca está associada à pureza, à inocência e à espiritualidade, sendo uma figura constante em pinturas renascentistas e celebrações religiosas. Com o desenvolvimento de milhares de híbridos, a flor ganhou novas cores e significados:
+      </p>
+      <ul>
+        <li><strong>Branco:</strong> Paz, pureza e inocência.</li>
+        <li><strong>Amarelo:</strong> Alegria, gratidão e amizade.</li>
+        <li><strong>Rosa e Vermelho:</strong> Romance, paixão e admiração.</li>
+      </ul>
+
+      <h3>Dicas para Cultivo e Cuidados</h3>
+      <p>
+        O cultivo do lírio exige atenção a detalhes específicos para que a planta floresça de forma saudável:
+      </p>
+      <ul>
+        <li><strong>Iluminação:</strong> Necessita de um local bem iluminado, preferindo o sol da manhã e sombra parcial nas horas mais quentes do dia.</li>
+        <li><strong>Solo:</strong> Deve ser rico em nutrientes e apresentar excelente drenagem, pois o acúmulo de água apodrece o bulbo facilmente.</li>
+        <li><strong>Rega:</strong> Regas moderadas, mantendo a terra apenas úmida.</li>
+      </ul>
+
+      <div class="alert-box">
+        <h4>⚠️ Alerta Importante de Toxicidade</h4>
+        <p>
+          Os lírios são <strong>altamente tóxicos para gatos</strong>. A ingestão de qualquer parte da planta — incluindo o pólen ou as pétalas — pode causar insuficiência renal grave nos felinos. Mantenha longe dos seus bichinhos!
+        </p>
+      </div>
+
+      <div class="post-reactions">
+        <span class="reaction-item">🌸 12</span>
+        <span class="reaction-item">💖 8</span>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Blog Maria - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
 </html>
