@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lírio Branco - Mundo dos Lírios</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🤍 Lírio Branco</h1>
+        <p>Conheça mais sobre essa bela variedade de lírio.</p>
+    </header>
+
+    <main>
+
+        <article class="card">
+
+            <img src="img/lirio-branco.jpg" alt="Lírio branco">
+
+            <div class="conteudo">
+
+                <h2>🤍 Lírio Branco</h2>
+
+                <p class="artigo-autor">
+                    Por: Maria Eduarda
+                </p>
+
+                <h3>Características</h3>
+
+                <p>
+                    O lírio branco possui flores de aparência delicada
+                    e elegante. Suas pétalas claras fazem com que a
+                    planta tenha um visual muito bonito e marcante.
+                </p>
+
+                <h3>Curiosidades</h3>
+
+                <p>
+                    Os lírios pertencem ao gênero Lilium e existem
+                    diversas espécies e variedades. As flores podem
+                    apresentar diferentes cores, formatos e tamanhos.
+                </p>
+
+                <h3>Cuidados</h3>
+
+                <p>
+                    Para crescer bem, o lírio precisa de iluminação
+                    adequada, regas equilibradas e um solo com boa
+                    drenagem. É importante evitar deixar o solo
+                    constantemente encharcado.
+                </p>
+
+                <h3>Por que o lírio branco é especial?</h3>
+
+                <p>
+                    O lírio branco se destaca pela aparência delicada
+                    e pela beleza de suas flores. Ele pode ser utilizado
+                    para decorar jardins, ambientes internos e arranjos
+                    florais.
+                </p>
+
+                <br>
+
+                <button class="botao-saiba-mais"
+                    onclick="window.location.href='index.html'">
+                    ← Voltar para os lírios
+                </button>
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>🌷 Mundo dos Lírios</p>
+        <p>Beleza em cada detalhe.</p>
+    </footer>
+
+</body>
+
+</html>
