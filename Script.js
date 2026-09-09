@@ -1,8 +1,12 @@
+// ===============================
+// BOTÕES "SAIBA MAIS"
+// ===============================
+
 const botoesSaibaMais = document.querySelectorAll(".botao-saiba-mais");
 
-botoesSaibaMais.forEach(function(botao) {
+botoesSaibaMais.forEach(function (botao) {
 
-    botao.addEventListener("click", function() {
+    botao.addEventListener("click", function () {
 
         const informacoes = botao.nextElementSibling;
 
@@ -19,24 +23,43 @@ botoesSaibaMais.forEach(function(botao) {
 });
 
 
+// ===============================
+// BOTÕES DE REAÇÃO
+// ===============================
+
 const botoesReacao = document.querySelectorAll(".reacao");
 
-botoesReacao.forEach(function(botao) {
+botoesReacao.forEach(function (botao) {
 
     let curtiu = false;
 
-    botao.addEventListener("click", function() {
+    botao.addEventListener("click", function () {
 
-        const texto = botao.querySelector("span");
+        const contador = botao.querySelector("span");
 
-        if (curtiu === false) {
-            texto.textContent++;
+        let quantidade = Number(contador.textContent);
+
+        if (!curtiu) {
+
+            quantidade++;
+
             curtiu = true;
+
+            botao.classList.add("ativo");
+
         } else {
-            texto.textContent--;
+
+            quantidade--;
+
             curtiu = false;
+
+            botao.classList.remove("ativo");
+
         }
+
+        contador.textContent = quantidade;
 
     });
 
 });
+

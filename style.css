@@ -169,3 +169,11 @@ footer p:first-child {
         text-align: left;
     }
 }
+.reacao.ativo {
+    background-color: #6b4c6e;
+    color: white;
+}
+
+.reacao.ativo:hover {
+    background-color: #513853;
+}
